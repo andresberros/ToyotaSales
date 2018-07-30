@@ -1,0 +1,112 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* Set padding to display errors that occur during databinding */
+.padding-error {
+    padding-top: 20px;
+}
+
+
+.carsContent img {
+    width: 206px;
+    margin: 50px;
+}
+
+.bot-container {
+    z-index: 100;
+}
+
+.bot-avatar-separator {
+    border-right-style: solid;
+    border-right-width: 1px;
+}
+
+.h2subTitle {
+    position: fixed;
+    z-index: 200;
+    top: 34%;
+    left: 17%;
+    font-size: 17px;
+    color: #FFF;
+}
+
+.h2subTitleSpan {
+    position: fixed;
+    top: 34%;
+    left: 27%;
+    color: white;
+    font-size: 23px;
+}
+
+.avatar {
+    width: 3%;
+    position: fixed;
+    top: 40%;
+    left: 23%;
+    height: 5%;
+}
+
+.voice-icon {
+    width: 4%;
+    height: 5%;
+    position: fixed;
+    top: 40%;
+    left: 26%;
+}
+
+.text-area-voice {
+    height: 5%;
+    width: 51%;
+    position: fixed;
+    top: 40%;
+    left: 30%;
+    margin-left: 5px;
+}
+
+.main-video-area {
+    width: 40%;
+    position: fixed;
+    top: 6%;
+    left: 23%;
+}
+
+.carsLoading {
+    margin-top: 37%;
+    width: 24%;
+    margin-left: 27%;
+}
+
+.selected-car {
+    border-color: red;
+    border-style: solid;
+    border-width: 2px;
+}
+
+@media only screen and (max-width: 767px) {
+    .nofloat {
+        float: none;
+        padding: 10px 15px;
+    }
+}

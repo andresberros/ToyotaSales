@@ -1,0 +1,258 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="col-md-12 bot-container">
+    <img src="/Content/Images/Fiachra front 2.png" class="main-video-area">
+    <span id="h2subTitle" class="h2subTitleSpan">Of Course, take a look at the list of Hatchbacks availables below</span>
+    <img src="/Content/Images/Avatar girl.png" class="avatar">
+    <img src="/Content/Images/voiceRecognition.gif" class="voice-icon">
+    <textarea id="h2ClientAnswer" class="text-area-voice">Can you show me some 5 Door Hatchbacks?</textarea>
+</div>
+<div style="clear:both"></div>
+<img src="~/Content/Images/loader-toyota.gif" class="carsLoading" style="display:none" />
+<img src="~/Content/Images/selected-toyota.png" class="toyota-blade" style="display:none;margin-top: 34%;margin-left: 5%;" />
+<img src="~/Content/Images/your-location.png" class="your-location" style="display:none;margin-top: 19%;margin-left: 11%;" />
+<img src="~/Content/Images/Test-drive-Confirmation.png" class="test-confirmation" style="display:none;margin-top: 35%;"/>
+<div class="row carsContent" style="margin-top: 40%; display:none">
+    <div class="col-md-3">
+        <img src="/Content/Images/Cars/0-Toyota-YARIS-thumbnail.jpg">
+    </div>
+    <div class="col-md-3 candidate-car">
+        <img src="/Content/Images/Cars/toyota blade.jpg">
+    </div>
+    <div class="col-md-3">
+        <img src="/Content/Images/Cars/39049-3-toy.jpg">
+    </div>
+    <div class="col-md-3">
+        <img src="/Content/Images/Cars/another car.jpg">
+    </div>
+    <div class="col-md-3">
+        <img src="/Content/Images/Cars/another2.jpg">
+    </div>
+    <div class="col-md-3">
+        <img src="/Content/Images/Cars/best-back-to-school-toyota-cars-for-college-students-2017-18.jpg">
+    </div>
+    <div class="col-md-3">
+        <img src="/Content/Images/Cars/images.jpg">
+    </div>
+    <div class="col-md-3">
+        <img src="/Content/Images/Cars/Toyota-Camry-RZ-driving-highway.jpg">
+    </div>
+    <div class="col-md-3">
+        <img src="/Content/Images/Cars/0-Toyota-YARIS-thumbnail.jpg">
+    </div>
+    <div class="col-md-3">
+        <img src="/Content/Images/Cars/toyota blade.jpg">
+    </div>
+    <div class="col-md-3">
+        <img src="/Content/Images/Cars/39049-3-toy.jpg">
+    </div>
+    <div class="col-md-3">
+        <img src="/Content/Images/Cars/another car.jpg">
+    </div>
+    <div class="col-md-3">
+        <img src="/Content/Images/Cars/another2.jpg">
+    </div>
+    <div class="col-md-3">
+        <img src="/Content/Images/Cars/best-back-to-school-toyota-cars-for-college-students-2017-18.jpg">
+    </div>
+    <div class="col-md-3">
+        <img src="/Content/Images/Cars/images.jpg">
+    </div>
+    <div class="col-md-3">
+        <img src="/Content/Images/Cars/Toyota-Camry-RZ-driving-highway.jpg">
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+
+        var $scrollingDiv = $("#jumbotron");
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 220) {
+                $scrollingDiv
+                    .css("position", 'fixed')
+                    .css("top", '46px')
+            } else {
+                $scrollingDiv
+                    .css("position", '')
+                    .css("top", '')
+            }
+        });
+
+        setTimeout(function () {
+            $('#h2subTitle').text('Hi Girisha!');
+        }, 1000);
+
+        setTimeout(function () {
+            $('#h2subTitle').text('Hi Girisha! How are you?');
+        }, 1500);
+
+        setTimeout(function () {
+            $('#h2subTitle').text("");
+            $('#h2ClientAnswer').text("Hi!");
+        }, 2500);
+
+        setTimeout(function () {
+            $('#h2ClientAnswer').text("Hi!, I'm good");
+        }, 3000);
+
+        setTimeout(function () {
+            $('#h2ClientAnswer').text("Hi!, I'm good, thanks.");
+        }, 3500);
+
+        setTimeout(function () {
+            $('#h2ClientAnswer').text("");
+            $('#h2subTitle').text("That's");
+        }, 4500);
+
+        setTimeout(function () {
+            $('#h2subTitle').text("That's great");
+        }, 5000);
+
+        setTimeout(function () {
+            $('#h2subTitle').text("That's great to hear.");
+        }, 5500);
+
+        setTimeout(function () {
+            $('#h2subTitle').text("");
+            $('#h2ClientAnswer').text("");
+            $('#h2subTitle').text("What");
+        }, 6000);
+
+        setTimeout(function () {
+            $('#h2subTitle').text("What can I");
+        }, 6200);
+
+        setTimeout(function () {
+            $('#h2subTitle').text("What can I do for");
+        }, 6400);
+
+        setTimeout(function () {
+            $('#h2subTitle').text("What can I do for you today?");
+        }, 6600);
+
+        setTimeout(function () {
+            $('#h2subTitle').text("");
+            $('#h2ClientAnswer').text("Well, I am trying to find a new car for me.");
+        }, 8000);
+
+        setTimeout(function () {
+            $('#h2ClientAnswer').text("");
+            $('#h2subTitle').text("What kind of car are you looking for?");
+        }, 10000);
+
+        setTimeout(function () {
+            $('#h2subTitle').text("");
+            $('#h2ClientAnswer').text("Can you show me some 5 Door Hatchbacks?");
+        }, 12000);
+
+        setTimeout(function () {
+            $('#h2ClientAnswer').text("");
+            $('#h2subTitle').text("Of Course, take a look at the list of Hatchbacks availables below");
+        }, 14000);
+
+        setTimeout(function () {
+            $('#h2subTitle').text("");
+            $('#h2ClientAnswer').text("");
+            $('.carsLoading').show();
+            $('#h2subTitle').text("");
+            $('#h2ClientAnswer').text("");
+        }, 16000);
+
+        setTimeout(function () {
+            $('.carsLoading').hide();
+            $('.carsContent').show();
+        }, 20000);
+
+        setTimeout(function () {
+            $('.carsLoading').hide();
+            $('#h2ClientAnswer').text("Thank you, that's fantastic!. Can I see the Toyota Blade closer?");
+        }, 24000);
+
+        setTimeout(function () {
+            $('#h2ClientAnswer').text("");
+            $('#h2subTitle').text("Of course, here we go!");
+        }, 26000);
+
+        setTimeout(function () {
+            $('#h2subTitle').text("");
+            $('#h2ClientAnswer').text("");
+            $('.candidate-car').addClass("selected-car");
+        }, 26000);
+
+        setTimeout(function () {
+            $('.carsContent').hide();
+            $('.carsLoading').show();
+        }, 28000);
+
+        setTimeout(function () {
+            $('.carsLoading').hide();
+            $('.toyota-blade').show();
+        }, 30000);
+
+        setTimeout(function () {
+            $('#h2ClientAnswer').text("Looks great.");
+        }, 34000);
+
+        setTimeout(function () {
+            $('#h2subTitle').text("Would you like me to book a test drive close to your place?");
+        }, 36000);
+
+        setTimeout(function () {
+            $('#h2ClientAnswer').text("Yes, that'd be awesome.");
+        }, 38000);
+
+        setTimeout(function () {
+            $('#h2subTitle').text("What time and day of the week best suits you?");
+        }, 40000);
+
+        setTimeout(function () {
+            $('#h2ClientAnswer').text("mmm, maybe Saturday around 10 am?.");
+        }, 42000);
+
+        setTimeout(function () {
+            $('#h2subTitle').text("Let me see what I can do...");
+        }, 44000);
+
+        setTimeout(function () {
+            $('.toyota-blade').hide();
+            $('.carsLoading').show();
+        }, 46000);
+
+        setTimeout(function () {
+            $('.carsLoading').hide();
+            $('.your-location').show();
+        }, 48000);
+
+        setTimeout(function () {
+            $('#h2subTitle').text("You could do a test drive in");
+        }, 50000);
+
+        setTimeout(function () {
+            $('#h2subTitle').text("101 Great North Rd, Grey Lynn, Auckland 1021");
+        }, 51000);
+
+        setTimeout(function () {
+            $('#h2subTitle').text("I can receive you myself at 10 pm");
+        }, 52000);
+
+        setTimeout(function () {
+            $('#h2subTitle').text("Is that ok?");
+        }, 53000);
+
+        setTimeout(function () {
+            $('#h2ClientAnswer').text("Yes, perfect!");
+            $('.your-location').hide();
+            $('.carsLoading').show();
+        }, 54000);
+
+        setTimeout(function () {
+            $('.carsLoading').hide();
+            $('.your-location').hide();
+            $('#h2subTitle').text("Done, please ask for my me when you are there.");
+            $('.test-confirmation').show();
+        }, 56000);
+
+    });
+</script>
