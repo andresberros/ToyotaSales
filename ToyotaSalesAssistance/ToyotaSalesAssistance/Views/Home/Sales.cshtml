@@ -2,7 +2,27 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div class="col-md-12 bot-container">
-    <img src="/Content/Images/Fiachra front 2.png" class="main-video-area">
+    <video width="400" class="main-video-area" id="frame_4">
+        <source autoplay src="~/Content/Video/frame_4.mp4" type="video/mp4" />
+    </video>
+    <video width="400" style="display:none" class="main-video-area" id="frame_6">
+        <source src="~/Content/Video/frame_6.mp4" type="video/mp4" />
+    </video>
+    <video width="400" style="display:none" class="main-video-area" id="frame_81">
+        <source src="~/Content/Video/frame_8.1.mp4" type="video/mp4" />
+    </video>
+    <video width="400" style="display:none" class="main-video-area" id="frame_82">
+        <source src="~/Content/Video/frame_8.2.mp4" type="video/mp4" />
+    </video>
+    <video width="400" style="display:none" class="main-video-area" id="frame_9">
+        <source src="~/Content/Video/frame_9.mp4" type="video/mp4" />
+    </video>
+    <video width="400" style="display:none" class="main-video-area" id="frame_101">
+        <source src="~/Content/Video/frame_10.1.mp4" type="video/mp4" />
+    </video>
+    <video width="400" style="display:none" class="main-video-area" id="frame_102">
+        <source src="~/Content/Video/frame_10.2.mp4" type="video/mp4" />
+    </video>
     <span id="h2subTitle" class="h2subTitleSpan">Of Course, take a look at the list of Hatchbacks availables below</span>
     <img src="/Content/Images/Avatar girl.png" class="avatar">
     <img src="/Content/Images/voiceRecognition.gif" class="voice-icon">
@@ -10,9 +30,9 @@
 </div>
 <div style="clear:both"></div>
 <img src="~/Content/Images/loader-toyota.gif" class="carsLoading" style="display:none" />
-<img src="~/Content/Images/selected-toyota.png" class="toyota-blade" style="display:none;margin-top: 34%;margin-left: 5%;" />
-<img src="~/Content/Images/your-location.png" class="your-location" style="display:none;margin-top: 19%;margin-left: 11%;" />
-<img src="~/Content/Images/Test-drive-Confirmation.png" class="test-confirmation" style="display:none;margin-top: 35%;"/>
+<img src="~/Content/Images/selected-toyota.png" class="toyota-blade" style="display:none;" />
+<img src="~/Content/Images/your-location.png" class="your-location" style="display:none;" />
+<img src="~/Content/Images/Test-drive-Confirmation.png" class="test-confirmation" style="display:none" />
 <div class="row carsContent" style="margin-top: 40%; display:none">
     <div class="col-md-3">
         <img src="/Content/Images/Cars/0-Toyota-YARIS-thumbnail.jpg">
@@ -66,6 +86,8 @@
 <script>
     $(document).ready(function () {
 
+        $('#h2subTitle').text('');
+        $('#h2ClientAnswer').text('');
         var $scrollingDiv = $("#jumbotron");
 
         $(window).scroll(function () {
@@ -79,78 +101,54 @@
                     .css("top", '')
             }
         });
+    });
 
+    document.onkeydown = function (e) {
+        e = e || window.event;
+        var key = e.which || e.keyCode;
+        if (key === 32) {
+            triggerFlow();
+        }
+    }
+
+    function triggerFlow() {
         setTimeout(function () {
-            $('#h2subTitle').text('Hi Girisha!');
+            $('#frame_4')[0].play();
+            //$('video').trigger('pause');
+            $('#h2subTitle').text('Hi Girisha, ');
         }, 1000);
 
         setTimeout(function () {
-            $('#h2subTitle').text('Hi Girisha! How are you?');
+            $('#h2subTitle').text('Hi Girisha, what can I do for you today?');
         }, 1500);
 
         setTimeout(function () {
-            $('#h2subTitle').text("");
-            $('#h2ClientAnswer').text("Hi!");
-        }, 2500);
-
-        setTimeout(function () {
-            $('#h2ClientAnswer').text("Hi!, I'm good");
-        }, 3000);
-
-        setTimeout(function () {
-            $('#h2ClientAnswer').text("Hi!, I'm good, thanks.");
+            $('#h2ClientAnswer').text("Hi ");
         }, 3500);
 
         setTimeout(function () {
-            $('#h2ClientAnswer').text("");
-            $('#h2subTitle').text("That's");
-        }, 4500);
-
-        setTimeout(function () {
-            $('#h2subTitle').text("That's great");
-        }, 5000);
-
-        setTimeout(function () {
-            $('#h2subTitle').text("That's great to hear.");
+            $('#h2ClientAnswer').text("Hi, I’m looking for a 5 door Hatchback car.");
         }, 5500);
 
         setTimeout(function () {
             $('#h2subTitle').text("");
             $('#h2ClientAnswer').text("");
-            $('#h2subTitle').text("What");
-        }, 6000);
+        }, 6500);
 
         setTimeout(function () {
-            $('#h2subTitle').text("What can I");
-        }, 6200);
+            $('#frame_4').hide();
+            $('#frame_6').show();
+            $('#frame_6')[0].play();
+            $('#h2subTitle').text("Of Course, ");
+        }, 7500);
 
         setTimeout(function () {
-            $('#h2subTitle').text("What can I do for");
-        }, 6400);
+            $('#h2subTitle').text("Of Course, take a look at the list of");
+        }, 8500);
 
         setTimeout(function () {
-            $('#h2subTitle').text("What can I do for you today?");
-        }, 6600);
-
-        setTimeout(function () {
-            $('#h2subTitle').text("");
-            $('#h2ClientAnswer').text("Well, I am trying to find a new car for me.");
-        }, 8000);
-
-        setTimeout(function () {
-            $('#h2ClientAnswer').text("");
-            $('#h2subTitle').text("What kind of car are you looking for?");
-        }, 10000);
-
-        setTimeout(function () {
-            $('#h2subTitle').text("");
-            $('#h2ClientAnswer').text("Can you show me some 5 Door Hatchbacks?");
-        }, 12000);
-
-        setTimeout(function () {
-            $('#h2ClientAnswer').text("");
-            $('#h2subTitle').text("Of Course, take a look at the list of Hatchbacks availables below");
-        }, 14000);
+            $('#h2subTitle').text("Hatchbacks availables below.");
+        }, 9000);
 
         setTimeout(function () {
             $('#h2subTitle').text("");
@@ -158,101 +156,137 @@
             $('.carsLoading').show();
             $('#h2subTitle').text("");
             $('#h2ClientAnswer').text("");
-        }, 16000);
+        }, 10500);
 
         setTimeout(function () {
             $('.carsLoading').hide();
             $('.carsContent').show();
-        }, 20000);
+        }, 12000);
 
         setTimeout(function () {
             $('.carsLoading').hide();
-            $('#h2ClientAnswer').text("Thank you, that's fantastic!. Can I see the Toyota Blade closer?");
-        }, 24000);
+            $('#h2ClientAnswer').text("Oh, that’s great, ");
+        }, 13500);
 
         setTimeout(function () {
-            $('#h2ClientAnswer').text("");
-            $('#h2subTitle').text("Of course, here we go!");
-        }, 26000);
+            $('.carsLoading').hide();
+            $('#h2ClientAnswer').text("Oh, that’s great, can I take a closer look to the toyota blade ?");
+        }, 15000);
 
         setTimeout(function () {
             $('#h2subTitle').text("");
             $('#h2ClientAnswer').text("");
             $('.candidate-car').addClass("selected-car");
-        }, 26000);
+        }, 16500);
 
         setTimeout(function () {
             $('.carsContent').hide();
             $('.carsLoading').show();
-        }, 28000);
+        }, 18000);
 
         setTimeout(function () {
             $('.carsLoading').hide();
             $('.toyota-blade').show();
-        }, 30000);
+        }, 19000);
 
         setTimeout(function () {
-            $('#h2ClientAnswer').text("Looks great.");
-        }, 34000);
+            $('#h2ClientAnswer').text("Great!");
+        }, 21500);
 
         setTimeout(function () {
-            $('#h2subTitle').text("Would you like me to book a test drive close to your place?");
-        }, 36000);
+            $('#frame_6').hide();
+            $('#frame_81').show();
+            $('#frame_81')[0].play();
+            $('#h2subTitle').text("Do you want me to book");
+        }, 23500);
 
         setTimeout(function () {
-            $('#h2ClientAnswer').text("Yes, that'd be awesome.");
-        }, 38000);
+            $('#h2subTitle').text("a test drive close to your place ?");
+        }, 24500);
 
         setTimeout(function () {
-            $('#h2subTitle').text("What time and day of the week best suits you?");
-        }, 40000);
+            $('#h2subTitle').text("I can be available myself in person");
+        }, 26500);
 
         setTimeout(function () {
-            $('#h2ClientAnswer').text("mmm, maybe Saturday around 10 am?.");
-        }, 42000);
+            $('#h2subTitle').text("Or assign you another assistant.");
+        }, 27500);
 
         setTimeout(function () {
-            $('#h2subTitle').text("Let me see what I can do...");
-        }, 44000);
+            $('#h2ClientAnswer').text("That’d be great.");
+        }, 29000);
+
+        setTimeout(function () {
+            $('#frame_81').hide();
+            $('#frame_82').show();
+            $('#frame_82')[0].play();
+            $('#h2subTitle').text("What time and date best suits you?");
+        }, 30500);
+
+        setTimeout(function () {
+            $('#h2ClientAnswer').text("What about saturday 10 am?.");
+        }, 32500);
+
+        setTimeout(function () {
+            $('#frame_82').hide();
+            $('#frame_82').show();
+            $('#frame_9')[0].play();
+            $('#h2subTitle').text("Sure, let me see what I can do?");
+        }, 34500);
 
         setTimeout(function () {
             $('.toyota-blade').hide();
             $('.carsLoading').show();
-        }, 46000);
+        }, 35500);
 
         setTimeout(function () {
             $('.carsLoading').hide();
             $('.your-location').show();
-        }, 48000);
+        }, 37000);
 
         setTimeout(function () {
-            $('#h2subTitle').text("You could do a test drive in");
-        }, 50000);
+            $('#frame_9').hide();
+            $('#frame_101').show();
+            $('#frame_101')[0].play();
+            $('#h2subTitle').text("You could do a test drive in Grey Lynn, sounds good?");
+        }, 39000);
 
         setTimeout(function () {
-            $('#h2subTitle').text("101 Great North Rd, Grey Lynn, Auckland 1021");
-        }, 51000);
+            $('#h2ClientAnswer').text("Geat!");
+        }, 40500);
 
         setTimeout(function () {
-            $('#h2subTitle').text("I can receive you myself at 10 pm");
-        }, 52000);
-
-        setTimeout(function () {
-            $('#h2subTitle').text("Is that ok?");
-        }, 53000);
-
-        setTimeout(function () {
-            $('#h2ClientAnswer').text("Yes, perfect!");
             $('.your-location').hide();
             $('.carsLoading').show();
-        }, 54000);
+        }, 42000);
 
         setTimeout(function () {
             $('.carsLoading').hide();
             $('.your-location').hide();
-            $('#h2subTitle').text("Done, please ask for my me when you are there.");
             $('.test-confirmation').show();
-        }, 56000);
+        }, 44000);
 
-    });
+        setTimeout(function () {
+            $('#frame_101').hide();
+            $('#frame_102').show();
+            $('#frame_102')[0].play();
+            $('#h2subTitle').text("Done, ");
+        }, 45000);
+
+        setTimeout(function () {
+            $('#h2subTitle').text("Done, please scan the QR code we sent you");
+        }, 47000);
+
+        setTimeout(function () {
+            $('#h2subTitle').text("I’ll be waiting for you at the place with some coffee.");
+        }, 49000);
+
+        setTimeout(function () {
+            $('#h2subTitle').text("Ask for me");
+        }, 51000);
+
+        setTimeout(function () {
+            $('#h2subTitle').text("my name is Fiachra.");
+        }, 52000);
+    }
 </script>
