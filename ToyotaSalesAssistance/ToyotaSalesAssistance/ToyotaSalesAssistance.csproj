@@ -268,9 +268,12 @@
     <Content Include="Content\Images\Cars\toyota blade.jpg" />
     <Content Include="Content\Images\Cars\Toyota-Camry-RZ-driving-highway.jpg" />
     <Content Include="Content\Images\Fiachra front 2.png" />
+    <Content Include="Content\Images\fiachra_3d.jpg" />
     <Content Include="Content\Images\Fiachra_front_1.jpg" />
+    <Content Include="Content\Images\fransisco_3d.jpg" />
     <Content Include="Content\Images\header-logo%402x.png" />
     <Content Include="Content\Images\loader-toyota.gif" />
+    <Content Include="Content\Images\sandra_3d.jpg" />
     <Content Include="Content\Images\selected-toyota.png" />
     <Content Include="Content\Images\Test-drive-Confirmation.png" />
     <Content Include="Content\Images\Toyota_logo_1.png" />
