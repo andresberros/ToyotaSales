@@ -277,6 +277,7 @@
     <Content Include="Content\Images\selected-toyota.png" />
     <Content Include="Content\Images\Test-drive-Confirmation.png" />
     <Content Include="Content\Images\Toyota_logo_1.png" />
+    <Content Include="Content\Images\user.png" />
     <Content Include="Content\Images\voiceRecognition.gif" />
     <Content Include="Content\Images\your-location.png" />
     <Content Include="Content\Site.css" />
